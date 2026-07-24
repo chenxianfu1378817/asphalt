@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>约2000吨陈旧湖沥青提纯处置实施方案（专业工程讨论版）</title>
+  <style>
+    :root {
+      --ink: #202020;
+      --muted: #5c6470;
+      --line: #d8dde3;
+      --panel: #ffffff;
+      --bg: #f4f6f8;
+      --brand: #14506b;
+      --brand2: #3e6f4c;
+      --heat: #b94f27;
+      --oil: #3b3b33;
+      --safe: #2d7d54;
+      --warn: #b45309;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+    header {
+      background:
+        linear-gradient(120deg, rgba(18,42,58,.96), rgba(20,80,107,.94) 55%, rgba(62,111,76,.92)),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0, rgba(255,255,255,.08) 1px, transparent 1px, transparent 42px);
+      color: white;
+      padding: 48px 20px 34px;
+    }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    h1 { margin: 0 0 14px; font-size: clamp(28px, 4vw, 48px); line-height: 1.18; letter-spacing: 0; }
+    h2 { margin: 42px 0 14px; font-size: clamp(22px, 3vw, 32px); line-height: 1.25; }
+    h3 { margin: 0 0 10px; font-size: 20px; }
+    p { margin: 0 0 12px; }
+    .lead { max-width: 900px; font-size: 18px; opacity: .95; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .hero-pill { border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 6px 12px; font-size: 14px; background: rgba(255,255,255,.1); }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    nav .wrap { display: flex; gap: 8px; padding: 10px 20px; }
+    nav a {
+      color: var(--brand);
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    nav a:hover { background: #e8f1f5; }
+    main { padding: 22px 20px 54px; }
+    .notice, .card, .diagram-card, .photo-slot {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(21, 35, 48, .06);
+    }
+    .notice {
+      padding: 18px;
+      border-left: 5px solid var(--warn);
+      margin: 22px 0;
+    }
+    .grid { display: grid; gap: 16px; }
+    .grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .card { padding: 18px; }
+    .metric { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: end; }
+    .metric strong { font-size: 28px; color: var(--brand); line-height: 1; white-space: nowrap; }
+    .tag {
+      display: inline-block;
+      padding: 3px 8px;
+      background: #e8f1f5;
+      color: var(--brand);
+      border-radius: 999px;
+      font-size: 13px;
+      margin: 0 6px 8px 0;
+    }
+    .diagram-card { margin: 18px 0 28px; overflow: hidden; }
+    .diagram-head {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: start;
+    }
+    .diagram-head p { color: var(--muted); margin: 4px 0 0; }
+    .svg-wrap { background: linear-gradient(#fbfcfd, #f5f8fa); overflow-x: auto; padding: 12px; }
+    svg { max-width: 100%; height: auto; min-width: 760px; display: block; margin: 0 auto; }
+    .notes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border-top: 1px solid var(--line); }
+    .notes div { background: white; padding: 14px; }
+    .notes b { display: block; margin-bottom: 6px; color: #263238; }
+    table { width: 100%; border-collapse: collapse; background: white; border: 1px solid var(--line); }
+    th, td { border: 1px solid var(--line); padding: 10px; text-align: left; vertical-align: top; }
+    th { background: #eef3f6; }
+    .photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .photo-slot { overflow: hidden; color: var(--muted); background: white; }
+    .photo-slot img { width: 100%; height: 210px; object-fit: cover; display: block; border-bottom: 1px solid var(--line); }
+    .photo-slot figcaption { margin: 0; padding: 12px 14px; font-size: 14px; color: var(--muted); }
+    .footer { color: var(--muted); padding-top: 28px; border-top: 1px solid var(--line); margin-top: 40px; }
+    .flowline { stroke: var(--brand); stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    .label { font-size: 15px; fill: #202020; font-weight: 650; }
+    .small { font-size: 12px; fill: #4d5661; }
+    .steel { fill: #eef2f5; stroke: #4b5563; stroke-width: 2; }
+    .hot { fill: #f6d0bd; stroke: var(--heat); stroke-width: 2; }
+    .oil { fill: #59564b; stroke: #222; stroke-width: 2; }
+    .safe { fill: #e8f5ee; stroke: var(--safe); stroke-width: 2; }
+    .warn { fill: #fff7ed; stroke: var(--warn); stroke-width: 2; }
+    .legend { display: flex; flex-wrap: wrap; gap: 10px; padding: 12px 18px; border-top: 1px solid var(--line); background: #fbfcfd; }
+    .legend span { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: 13px; }
+    .swatch { width: 14px; height: 14px; border-radius: 3px; display: inline-block; border: 1px solid #9aa4ae; }
+    .checklist { columns: 2; column-gap: 28px; padding-left: 20px; }
+    .checklist li { break-inside: avoid; margin-bottom: 8px; }
+    @media (max-width: 860px) {
+      .grid.cols-3, .grid.cols-2, .notes, .photo-grid { grid-template-columns: 1fr; }
+      .diagram-head { display: block; }
+      main { padding-left: 14px; padding-right: 14px; }
+      .notes div { padding: 12px; }
+    }
+    @media print {
+      nav { display: none; }
+      body { background: white; }
+      .diagram-card, .card, .notice { box-shadow: none; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>约2000吨陈旧湖沥青提纯处置实施方案</h1>
+      <p class="lead">专业工程讨论版。以“先中试验证、再分区热提纯”为主线，补充可低成本制作的常压设备结构示意、处理成本测算、安全环保边界和半年实施计划，供内部汇报、设备询价和合作方技术沟通使用。</p>
+      <div class="hero-meta"><span class="hero-pill">处理规模：约2000吨</span><span class="hero-pill">建议产能：30-40吨/日</span><span class="hero-pill">核心路线：脱水-融化-沉降-热过滤-调和</span><span class="hero-pill">决策依据：中试收率和产品检测</span></div>
+    </div>
+  </header>
+  <nav>
+    <div class="wrap">
+      <a href="#overview">结论</a><a href="#audit">可行性校核</a><a href="#photos">现场照片</a><a href="#kettle">融化釜</a><a href="#dewater">预热脱水</a><a href="#coarse">粗滤器</a><a href="#settling">沉降罐</a><a href="#fine">二级过滤</a><a href="#pipes">抽取回流</a><a href="#tanks">储罐调和</a><a href="#layout">平面布置</a><a href="#cost">成本计划</a><a href="#refs">依据</a>
+    </div>
+  </nav>
+  <main class="wrap">
+    <section id="overview">
+      <div class="notice">
+        <b>重要声明：</b>以下设备图属于概念及初步工程设计，用于立项、询价和与设备厂家沟通，不能替代有资质单位出具的施工图、压力容器或常压容器设计、导热油炉特种设备设计、安全设施设计、消防设计、环评及职业卫生评价。实际制造前必须由具备资质的设计、制造、安装单位复核。
+      </div>
+      <div class="grid cols-3">
+        <div class="card metric"><div><h3>实施判断</h3><p>具备热提纯研究价值，但不宜整批直接投产。</p></div><strong>先试产</strong></div>
+        <div class="card metric"><div><h3>关键门槛</h3><p>中试有效成品率达到70%左右，且调和后能稳定达标。</p></div><strong>≥70%</strong></div>
+        <div class="card metric"><div><h3>成本红线</h3><p>综合加工成本超过1600元/吨原料时，需重新比较粉料兜底路线。</p></div><strong>≤1600</strong></div>
+      </div>
+      <div class="grid cols-2" style="margin-top:16px">
+        <div class="card"><h3>推荐结论</h3><p>本批物料杂质和水分不均，最稳妥的做法是“覆盖防雨和机械预拣 → 100-300公斤小试 → 10-30吨中试 → 只处理高含油分区 → 批次检测销售”。若中试确认可回收沥青质高、过滤不严重堵塞、残渣含油可回收，则热提纯经济性通常优于低价磨粉。</p></div>
+        <div class="card"><h3>必须修正的假设</h3><p>不能按“损耗20%”直接核算利润。实际项目应拆分为水分蒸发、外来杂物、矿物残渣、设备挂壁和合格产品五类物料；成品也不能默认按普通70#重交沥青销售，应以检测和调和试验决定销售名称和价格。</p></div>
+      </div>
+    </section>
+
+    <section id="audit">
+      <h2>工程可行性和数据准确性校核</h2>
+      <table>
+        <tr><th>校核项</th><th>专业判断</th><th>对方案的影响</th></tr>
+        <tr><td>市场价格</td><td>2026年二季度公开资讯显示国内70#道路沥青价格仍在约4200-4700元/吨区间波动，华南价格曾在4500元/吨附近；现货受原油、炼厂开工、库存和雨季需求影响较大。</td><td>网页采用3800、4300、4700元/吨三档敏感性，不再把4400元/吨作为固定利润。</td></tr>
+        <tr><td>产品标准</td><td>GB/T 15180-2025《重交通道路石油沥青》已发布，实施日期为2025-09-01，替代GB/T 15180-2010。道路使用还需结合JTG F40和项目合同指标。</td><td>成品定位改为“直接重交沥青、调和沥青、天然改性组分”三选一，禁止未经检测冒称70#。</td></tr>
+        <tr><td>设备自制边界</td><td>常压料仓、常压沉降罐、篮式过滤器、保温管线和支架可考虑低成本制作；导热油炉、燃烧系统、承压部件、电气防爆、消防和环保设施不能随意自制。</td><td>所有图纸增加“不可省略安全部件”和“资质复核”提示。</td></tr>
+        <tr><td>融化温度</td><td>湖沥青和老化沥青软化、流动温度可能偏高，但长期接近195℃会增加老化、烟气和火灾风险。</td><td>采用110-150℃脱水软化、150-175℃常规融化、180-195℃短时高温的分段控制。</td></tr>
+        <tr><td>过滤策略</td><td>一次性精滤到过细不经济，容易形成高含油滤渣和堵塞停机。</td><td>采用“粗滤除大杂 → 沉降减负荷 → 二级热过滤”的组合，过滤精度由产品检测倒推。</td></tr>
+      </table>
+      <div class="notice"><b>可行性结论：</b>热提纯路线技术上可行，但经济上依赖三项中试数据：干基有效沥青回收率、滤渣含油率、单位能耗。若三项数据未闭合，不建议签订固定数量和固定质量的成品销售合同。</div>
+    </section>
+
+    <section id="photos">
+      <h2>现场照片嵌入区</h2>
+      <p>以下照片已从此前下载的网页文件中提取并嵌入新版工程包。照片显示物料已板结连片、堆体高低不平且含泥砂石块，说明正式热提纯前必须设置分区取料、预拣、破碎筛分和预热脱水。</p>
+      <div class="photo-grid">
+        <figure class="photo-slot"><img src="photos/site-photo-01.jpg" alt="现场照片1"><figcaption>照片1：仓内板结湖沥青，表面不规则，需机械剥离后分区处理。</figcaption></figure>
+        <figure class="photo-slot"><img src="photos/site-photo-02.jpg" alt="现场照片2"><figcaption>照片2：局部形成大块硬化料，破碎前需人工和机械预拣。</figcaption></figure>
+        <figure class="photo-slot"><img src="photos/site-photo-03.jpg" alt="现场照片3"><figcaption>照片3：可见石块、矿物颗粒和细粉，说明过滤残渣率需中试确认。</figcaption></figure>
+        <figure class="photo-slot"><img src="photos/site-photo-04.jpg" alt="现场照片4"><figcaption>照片4：物料连续成片，直接投釜会造成加热不均和局部夹水风险。</figcaption></figure>
+        <figure class="photo-slot"><img src="photos/site-photo-05.jpg" alt="现场照片5"><figcaption>照片5：堆体边界和杂物混入明显，低品位底料应单独核算。</figcaption></figure>
+        <figure class="photo-slot"><img src="photos/site-photo-06.jpg" alt="现场照片6"><figcaption>照片6：仓内整体状态复杂，建议先处理高含油区，低品位区作为粉料兜底。</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="kettle" class="diagram-card">
+      <div class="diagram-head"><div><h2>1. 低成本间歇式融化釜结构剖面图</h2><p>建议两台并联，单釜有效容积25至35m³，单批15至25吨。采用导热油间接加热，慢速搅拌，上部抽取清料，底部集中排渣。</p></div><span class="tag">核心自制设备</span></div>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 980 540" role="img" aria-label="间歇式融化釜结构剖面图">
+          <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1d5b7c"/></marker></defs>
+          <rect x="305" y="96" width="330" height="330" rx="38" class="steel"/>
+          <path d="M330 118H610V398L470 450L330 398Z" class="hot"/>
+          <path d="M356 244H584V384L470 420L356 384Z" class="oil"/>
+          <rect x="434" y="35" width="72" height="84" class="steel"/>
+          <text x="396" y="28" class="label">机械进料口 600-800mm</text>
+          <line x1="470" y1="116" x2="470" y2="430" stroke="#222" stroke-width="5"/>
+          <path d="M425 190C470 215 515 190 560 215" fill="none" stroke="#222" stroke-width="4"/>
+          <path d="M390 315C445 345 505 310 565 340" fill="none" stroke="#222" stroke-width="4"/>
+          <text x="600" y="214" class="label">慢速锚式搅拌 3-12rpm</text>
+          <path d="M330 155C360 140 390 170 420 155C450 140 480 170 510 155C540 140 570 170 610 155" fill="none" stroke="#c05024" stroke-width="4"/>
+          <path d="M330 360C360 345 390 375 420 360C450 345 480 375 510 360C540 345 570 375 610 360" fill="none" stroke="#c05024" stroke-width="4"/>
+          <text x="642" y="154" class="label">导热油夹套/盘管</text>
+          <text x="642" y="178" class="small">150-195℃分段控制，不用明火直烧</text>
+          <path d="M610 248H820" class="flowline"/>
+          <text x="690" y="235" class="label">上部浮动抽取口</text>
+          <text x="690" y="272" class="small">抽清料至沉降罐，避免抽底渣</text>
+          <path d="M470 450V505H610" class="flowline"/>
+          <text x="360" y="505" class="label">锥底/斜坡排渣至热渣箱</text>
+          <rect x="690" y="74" width="170" height="76" class="safe"/>
+          <text x="708" y="104" class="label">温度/液位/压力</text><text x="708" y="128" class="small">双温度点、高高液位、超压报警</text>
+          <path d="M635 115H690" class="flowline"/>
+          <path d="M505 68H300V34" class="flowline"/>
+          <text x="88" y="38" class="label">废气接口至冷凝+除雾+活性炭</text>
+          <rect x="93" y="155" width="160" height="88" class="warn"/>
+          <text x="110" y="184" class="label">安全不得省略</text>
+          <text x="110" y="208" class="small">防溢流、急停、事故放料</text>
+          <text x="110" y="228" class="small">人孔防喷护罩、氮气/蒸汽灭火口</text>
+        </svg>
+      </div>
+      <div class="notes"><div><b>材料建议</b>釜体Q235B/Q345R按设计复核，内壁耐磨板可局部加厚；热油盘管用无缝钢管，外保温岩棉+金属护板。</div><div><b>制造思路</b>可由常压热油夹套罐改造，但焊缝、强度、热膨胀、支座和消防间距必须复核。</div><div><b>检修方式</b>顶部人孔、侧部清渣门、底部排渣阀均需可隔离、可降温、可排空。</div><div><b>安全联锁</b>导热油低流量停炉、釜超温停加热、高高液位停进料、泵高压回流、废气风机停运禁止投料。</div></div>
+    </section>
+
+    <section id="dewater" class="diagram-card">
+      <div class="diagram-head"><div><h2>2. 预热脱水仓结构图</h2><p>露天湿料不能直接进高温釜。预热脱水仓用于40至110℃缓慢排水，降低爆沸、喷料和过滤堵塞风险。</p></div><span class="tag">安全关键设备</span></div>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 980 430" role="img" aria-label="预热脱水仓结构图">
+          <defs><marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1d5b7c"/></marker></defs>
+          <rect x="170" y="95" width="500" height="210" rx="22" class="steel"/>
+          <path d="M195 130H645V270H195Z" class="hot"/>
+          <path d="M205 245H635" stroke="#c05024" stroke-width="5" stroke-dasharray="14 8"/>
+          <text x="226" y="174" class="label">破碎后30-100mm物料</text>
+          <text x="226" y="205" class="small">分层摊铺，避免湿泥团直接包裹入釜</text>
+          <rect x="70" y="130" width="100" height="80" class="warn"/>
+          <text x="82" y="162" class="label">上料斗</text><text x="82" y="185" class="small">带格栅</text>
+          <path d="M170 170H70" class="flowline" style="marker-end:url(#arrow2)"/>
+          <rect x="700" y="90" width="160" height="80" class="safe"/>
+          <text x="716" y="120" class="label">负压排汽</text><text x="716" y="144" class="small">冷凝、除雾、废气处理</text>
+          <path d="M670 130H700" class="flowline" style="marker-end:url(#arrow2)"/>
+          <path d="M420 305V360H760" class="flowline" style="marker-end:url(#arrow2)"/>
+          <text x="536" y="352" class="label">螺旋/板链密闭出料至融化釜</text>
+          <path d="M270 305V365H150" class="flowline" style="marker-end:url(#arrow2)"/>
+          <text x="72" y="390" class="label">冷凝水/排水至隔油沉淀池</text>
+          <rect x="700" y="210" width="180" height="82" class="safe"/>
+          <text x="716" y="240" class="label">监测</text><text x="716" y="263" class="small">仓温、负压、料位、可燃气体</text>
+        </svg>
+      </div>
+      <div class="notes"><div><b>建议尺寸</b>容积15至25m³，适配半天到一天投料量；底部可做2%至5%坡度排水。</div><div><b>加热方式</b>导热油夹套或低温热风间接加热，严禁明火烘烤湿沥青。</div><div><b>操作控制</b>40-60℃排表水，60-90℃脱水，90-110℃保温确认无明显蒸汽后投釜。</div><div><b>检修环保</b>底部沉渣口、排水口、可开盖清理；冷凝液进隔油沉淀，不直排。</div></div>
+    </section>
+
+    <section id="coarse" class="diagram-card">
+      <div class="diagram-head"><div><h2>3. 双联粗滤器结构图</h2><p>一级粗滤拦截碎石、金属和包装残片。双联结构可不停机切换，滤渣箱回滴附着沥青，降低带油损失。</p></div><span class="tag">低成本可自制</span></div>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 980 430" role="img" aria-label="双联粗滤器结构图">
+          <defs><marker id="arrow3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1d5b7c"/></marker></defs>
+          <path d="M80 215H255" class="flowline" style="marker-end:url(#arrow3)"/><text x="80" y="195" class="label">融化釜热料</text>
+          <rect x="255" y="100" width="210" height="110" rx="16" class="steel"/><rect x="300" y="125" width="120" height="62" class="warn"/>
+          <text x="296" y="92" class="label">A路篮式滤筒 5-10mm</text>
+          <rect x="255" y="250" width="210" height="110" rx="16" class="steel"/><rect x="300" y="275" width="120" height="62" class="warn"/>
+          <text x="296" y="242" class="label">B路篮式滤筒 5-10mm</text>
+          <path d="M255 155H210V305H255" fill="none" stroke="#1d5b7c" stroke-width="3"/>
+          <path d="M465 155H680V215" class="flowline" style="marker-end:url(#arrow3)"/>
+          <path d="M465 305H680V215" class="flowline" style="marker-end:url(#arrow3)"/>
+          <text x="675" y="195" class="label">至沉降罐</text>
+          <rect x="720" y="120" width="160" height="84" class="safe"/>
+          <text x="736" y="150" class="label">压差表+切换阀</text><text x="736" y="174" class="small">一用一清，带保温伴热</text>
+          <rect x="326" y="365" width="260" height="46" class="hot"/>
+          <text x="350" y="395" class="label">热滤渣箱：倾斜回滴，回收附着沥青</text>
+        </svg>
+      </div>
+      <div class="notes"><div><b>材料建议</b>壳体用厚壁钢筒或法兰筒体，滤篮用不锈钢冲孔板或楔形条，外部导热油/电伴热。</div><div><b>制造思路</b>两只同规格筒体并联，入口出口设高温阀门和旁通，法兰快开但必须防喷。</div><div><b>检修方式</b>切换、隔离、泄压、降温后抽出滤篮；清理区设接油盘和防烫隔离。</div><div><b>不可省略</b>前后压差、泄压口、防喷护罩、伴热保温、滤渣回滴箱。</div></div>
+    </section>
+
+    <section id="settling" class="diagram-card">
+      <div class="diagram-head"><div><h2>4. 高温沉降罐结构图</h2><p>沉降罐通过密度差降低精滤负荷，比一味加细滤网更经济。建议两台并联，一台进料、一台沉降抽取。</p></div><span class="tag">提纯率关键</span></div>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 980 500" role="img" aria-label="高温沉降罐结构图">
+          <defs><marker id="arrow4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1d5b7c"/></marker></defs>
+          <rect x="310" y="60" width="340" height="330" rx="28" class="steel"/>
+          <path d="M335 90H625V350L480 405L335 350Z" class="oil"/>
+          <path d="M335 304H625V350L480 405L335 350Z" fill="#6f6254" stroke="#4b3a2a" stroke-width="2"/>
+          <path d="M80 180H310" class="flowline" style="marker-end:url(#arrow4)"/><text x="88" y="158" class="label">粗滤热料缓流进入</text>
+          <rect x="335" y="160" width="42" height="42" class="safe"/><text x="385" y="187" class="small">缓流分布器，避免扰动沉渣</text>
+          <path d="M625 135H825" class="flowline" style="marker-end:url(#arrow4)"/><text x="692" y="118" class="label">上清抽取至二级过滤</text>
+          <circle cx="625" cy="190" r="8" fill="#fff"/><circle cx="625" cy="245" r="8" fill="#fff"/><circle cx="625" cy="300" r="8" fill="#fff"/>
+          <text x="690" y="194" class="label">多高度取样口</text><text x="690" y="220" class="small">上/中/下检测灰分、水分、外观</text>
+          <path d="M480 405V465H645" class="flowline" style="marker-end:url(#arrow4)"/><text x="315" y="465" class="label">底部高灰料排渣/返回融化釜</text>
+          <path d="M360 95C400 80 440 108 480 95C520 80 560 108 620 95" fill="none" stroke="#c05024" stroke-width="4"/>
+          <text x="96" y="260" class="label">低功率保温盘管</text><text x="96" y="284" class="small">150-170℃，沉降4-12小时由中试确定</text>
+          <rect x="710" y="300" width="170" height="82" class="safe"/>
+          <text x="728" y="330" class="label">液位/温度/溢流</text><text x="728" y="354" class="small">高液位联锁进料阀</text>
+        </svg>
+      </div>
+      <div class="notes"><div><b>建议尺寸</b>单罐30至50m³，两台并联；锥底或斜底便于浓缩沉渣。</div><div><b>制造思路</b>常压保温罐加内部缓流分布器、盘管、多高度取样短节和上部抽取管。</div><div><b>检修方式</b>底部大口径排渣，侧部清渣门，抽取管可拆洗，罐顶留人孔。</div><div><b>联锁要求</b>高液位停进料、低液位停泵、超温报警、溢流进事故池。</div></div>
+    </section>
+
+    <section id="fine" class="diagram-card">
+      <div class="diagram-head"><div><h2>5. 二级热过滤装置结构图</h2><p>先2至3mm保护过滤，再0.5至1.5mm精滤。精度按产品用途倒推，不宜盲目追求过细导致压差高、耗材贵、带油多。</p></div><span class="tag">可拆洗设计</span></div>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 980 430" role="img" aria-label="二级热过滤装置结构图">
+          <defs><marker id="arrow5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1d5b7c"/></marker></defs>
+          <path d="M60 220H190" class="flowline" style="marker-end:url(#arrow5)"/><text x="60" y="198" class="label">沉降上清料</text>
+          <rect x="190" y="130" width="190" height="150" rx="18" class="steel"/><rect x="235" y="160" width="100" height="86" class="warn"/>
+          <text x="210" y="118" class="label">一级保护过滤 2-3mm</text>
+          <path d="M380 220H520" class="flowline" style="marker-end:url(#arrow5)"/>
+          <rect x="520" y="105" width="230" height="200" rx="18" class="steel"/>
+          <rect x="570" y="135" width="95" height="140" class="safe"/>
+          <path d="M592 145V265M615 145V265M638 145V265" stroke="#2d7d54" stroke-width="3"/>
+          <text x="535" y="92" class="label">二级精滤 0.5-1.5mm</text>
+          <text x="570" y="323" class="small">楔形网/刮刀自清洗/可拆洗滤筒</text>
+          <path d="M750 220H910" class="flowline" style="marker-end:url(#arrow5)"/><text x="804" y="198" class="label">至纯化料罐</text>
+          <path d="M640 305V370H315V280" class="flowline" style="marker-end:url(#arrow5)"/><text x="392" y="392" class="label">压差高时回流沉降罐，不强行憋压</text>
+          <rect x="420" y="40" width="150" height="62" class="safe"/><text x="438" y="66" class="label">压差/温度</text><text x="438" y="88" class="small">高压停泵开回流</text>
+        </svg>
+      </div>
+      <div class="notes"><div><b>材料建议</b>滤筒优先不锈钢楔形网或冲孔板，壳体和管道全保温伴热。</div><div><b>制造思路</b>保护滤器可自制篮式；精滤段可外购滤芯，自制保温壳体和快拆机构。</div><div><b>检修方式</b>双路预留，在线一套、清洗一套；滤芯吊装抽出，热态清洗设防烫平台。</div><div><b>不得省略</b>压差表、旁通回流、泄压口、接油盘、防喷护罩、禁止明火烘管。</div></div>
+    </section>
+
+    <section id="pipes" class="diagram-card">
+      <div class="diagram-head"><div><h2>6. 热沥青抽取和回流管路图</h2><p>管路设计目标是可抽取、可回流、可排空、可保温，避免长盲管和冷点凝堵。</p></div><span class="tag">减少堵管停机</span></div>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 980 430" role="img" aria-label="热沥青抽取和回流管路图">
+          <defs><marker id="arrow6" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1d5b7c"/></marker></defs>
+          <rect x="60" y="110" width="150" height="190" rx="20" class="oil"/><text x="80" y="96" class="label">沉降罐</text>
+          <circle cx="190" cy="155" r="8" fill="#fff"/><text x="76" y="334" class="small">浮动/分层吸入口</text>
+          <path d="M198 155H315" class="flowline" style="marker-end:url(#arrow6)"/>
+          <rect x="315" y="125" width="92" height="60" class="warn"/><text x="326" y="160" class="label">粗保护</text>
+          <path d="M407 155H520" class="flowline" style="marker-end:url(#arrow6)"/>
+          <circle cx="560" cy="155" r="40" class="steel"/><text x="533" y="160" class="label">齿轮泵</text>
+          <path d="M600 155H760" class="flowline" style="marker-end:url(#arrow6)"/>
+          <rect x="760" y="105" width="150" height="100" rx="18" class="safe"/><text x="786" y="150" class="label">过滤/储罐</text>
+          <path d="M630 155V285H170V300" class="flowline" style="marker-end:url(#arrow6)"/>
+          <text x="388" y="308" class="label">回流线：预热、卸压、压差高时回沉降罐</text>
+          <path d="M560 195V345H735" class="flowline" style="marker-end:url(#arrow6)"/>
+          <text x="458" y="366" class="label">低点排空至热回收桶/事故收集</text>
+          <rect x="350" y="40" width="270" height="55" class="safe"/><text x="370" y="73" class="label">全线导热油或电伴热，法兰设防喷护罩</text>
+        </svg>
+      </div>
+      <div class="notes"><div><b>泵型建议</b>耐高温齿轮泵或螺杆泵，一用一备；入口管径放大，缩短吸入距离。</div><div><b>管路要点</b>夹套阀或旋塞阀，少弯头、少盲管，低点可排空，高点可排气。</div><div><b>联锁保护</b>低液位停泵，出口高压停泵并开回流，过滤压差高报警。</div><div><b>检修方式</b>泵前后隔离阀、泄压排空、法兰防喷、管段可拆洗。</div></div>
+    </section>
+
+    <section id="tanks" class="diagram-card">
+      <div class="diagram-head"><div><h2>7. 纯化料罐、调和罐、成品罐结构与连接图</h2><p>每批纯化料先检测，再决定进合格罐或调和罐。不要未经检测直接混入大罐。</p></div><span class="tag">批次质量控制</span></div>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 980 430" role="img" aria-label="储罐调和连接图">
+          <defs><marker id="arrow7" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1d5b7c"/></marker></defs>
+          <rect x="70" y="105" width="180" height="210" rx="20" class="oil"/><text x="96" y="92" class="label">纯化料罐 100-150m³</text>
+          <rect x="395" y="105" width="190" height="210" rx="20" class="hot"/><text x="426" y="92" class="label">调和罐 100-150m³</text>
+          <rect x="735" y="105" width="180" height="210" rx="20" class="safe"/><text x="760" y="92" class="label">成品罐 100-200m³</text>
+          <path d="M250 185H395" class="flowline" style="marker-end:url(#arrow7)"/><text x="280" y="168" class="small">检测后需调和</text>
+          <path d="M250 260H735" class="flowline" style="marker-end:url(#arrow7)"/><text x="410" y="246" class="small">检测合格直入成品罐</text>
+          <path d="M585 210H735" class="flowline" style="marker-end:url(#arrow7)"/>
+          <path d="M490 315V372H160V315" class="flowline" style="marker-end:url(#arrow7)"/><text x="255" y="392" class="label">循环均化线/回流保温</text>
+          <path d="M825 315V375H925" class="flowline" style="marker-end:url(#arrow7)"/><text x="780" y="398" class="label">装车鹤管，废气收集</text>
+          <text x="100" y="142" class="small">盘管保温</text><text x="100" y="166" class="small">取样口</text><text x="100" y="190" class="small">高低液位</text>
+          <text x="430" y="142" class="small">慢速搅拌</text><text x="430" y="166" class="small">基质沥青入口</text><text x="430" y="190" class="small">配方计量</text>
+          <text x="770" y="142" class="small">合格批次</text><text x="770" y="166" class="small">降温保温</text><text x="770" y="190" class="small">溢流至事故池</text>
+        </svg>
+      </div>
+      <div class="notes"><div><b>材料建议</b>常压保温储罐，导热油盘管，外保温，罐区围堰，顶部废气收集。</div><div><b>制造思路</b>优先改造现有沥青罐，补充搅拌、循环、取样、液位和温度系统。</div><div><b>质量控制</b>每200至300吨形成销售批次，检测针入度、软化点、延度、黏度、闪点等。</div><div><b>安全部件</b>高高液位联锁、溢流管至事故池、呼吸废气处理、装车防溢、防烫隔离。</div></div>
+    </section>
+
+    <section id="layout" class="diagram-card">
+      <div class="diagram-head"><div><h2>8. 整套设备平面布置和物料流向图</h2><p>低成本项目的平面布置要减少热料距离，把破碎粉尘区、热加工区、罐区、残渣区和人员通道分开。</p></div><span class="tag">现场实施图</span></div>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 1080 620" role="img" aria-label="设备平面布置和物料流向图">
+          <defs><marker id="arrow8" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1d5b7c"/></marker></defs>
+          <rect x="30" y="40" width="1020" height="520" fill="#fff" stroke="#d8dde3" stroke-width="2"/>
+          <rect x="60" y="80" width="190" height="160" class="warn"/><text x="90" y="125" class="label">原料防雨分区</text><text x="90" y="152" class="small">A/B/C类分开</text><text x="90" y="176" class="small">四周排水沟</text>
+          <rect x="300" y="80" width="180" height="160" class="steel"/><text x="332" y="125" class="label">预拣破碎筛分</text><text x="332" y="152" class="small">除铁、除石、除包装物</text>
+          <rect x="530" y="80" width="170" height="160" class="hot"/><text x="560" y="125" class="label">预热脱水仓</text><text x="560" y="152" class="small">40-110℃</text>
+          <rect x="760" y="70" width="230" height="185" class="hot"/><text x="798" y="118" class="label">双融化釜区</text><text x="798" y="146" class="small">釜A投料/釜B沉降出料</text>
+          <rect x="760" y="300" width="230" height="90" class="warn"/><text x="802" y="355" class="label">热渣回滴/残渣暂存</text>
+          <rect x="530" y="300" width="170" height="95" class="steel"/><text x="560" y="352" class="label">粗滤+沉降</text>
+          <rect x="300" y="300" width="180" height="95" class="safe"/><text x="328" y="352" class="label">二级热过滤</text>
+          <rect x="60" y="300" width="190" height="180" class="safe"/><text x="92" y="352" class="label">纯化/调和/成品罐</text><text x="92" y="380" class="small">围堰、装车、废气收集</text>
+          <path d="M250 160H300" class="flowline" style="marker-end:url(#arrow8)"/>
+          <path d="M480 160H530" class="flowline" style="marker-end:url(#arrow8)"/>
+          <path d="M700 160H760" class="flowline" style="marker-end:url(#arrow8)"/>
+          <path d="M760 345H700" class="flowline" style="marker-end:url(#arrow8)"/>
+          <path d="M530 345H480" class="flowline" style="marker-end:url(#arrow8)"/>
+          <path d="M300 345H250" class="flowline" style="marker-end:url(#arrow8)"/>
+          <path d="M990 160H1030V520H60" fill="none" stroke="#2d7d54" stroke-width="3" stroke-dasharray="10 8"/>
+          <text x="740" y="535" class="label">废气主管至冷凝、除雾、活性炭/热氧化</text>
+          <rect x="305" y="455" width="390" height="55" fill="#eef3f6" stroke="#4b5563" stroke-width="2"/><text x="330" y="490" class="label">人员通道与消防通道：与热管线、装车点分离</text>
+        </svg>
+      </div>
+      <div class="notes"><div><b>布置原则</b>湿料、粉尘、热加工、罐区、残渣区分区；热料输送距离尽量短。</div><div><b>土建要求</b>硬化防渗地面、围堰、排水沟、事故池、隔油沉淀池。</div><div><b>消防环保</b>导热油炉独立布置，废气主管统一收集，罐区和装车区留消防通道。</div><div><b>实施建议</b>如附近有合法沥青厂，优先借用现有罐区、导热油炉和环保设施。</div></div>
+    </section>
+
+    <section id="cost">
+      <h2>成本、进度和决策门槛</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>单吨加工成本控制</h3>
+          <table><tr><th>项目</th><th>目标范围</th></tr><tr><td>挖掘、转运、分拣</td><td>50-100元/吨原料</td></tr><tr><td>破碎和筛分</td><td>60-120元/吨原料</td></tr><tr><td>预热脱水和熔化能源</td><td>180-350元/吨原料</td></tr><tr><td>人工、过滤、维修、环保、残渣</td><td>230-600元/吨原料</td></tr><tr><td>设备折旧或租赁、检测等</td><td>200-400元/吨原料</td></tr><tr><th>综合目标</th><th>约800-1300元/吨原料，先由10-30吨中试校正</th></tr></table>
+        </div>
+        <div class="card">
+          <h3>六个月实施安排</h3>
+          <table><tr><th>阶段</th><th>工作</th></tr><tr><td>第1-2周</td><td>覆盖防雨、分区、取样、检测</td></tr><tr><td>第3-4周</td><td>100-300公斤小试，确认起泡、沉降和过滤特性</td></tr><tr><td>第2个月</td><td>10-30吨中试，完成物料衡算、能耗核算、成品调和试验</td></tr><tr><td>第2-3个月</td><td>设备定型、采购或租赁、安装联动试车</td></tr><tr><td>第3-5个月</td><td>30-40吨/日分批生产，边检测边销售</td></tr><tr><td>第6个月</td><td>尾料处理、清罐、残渣处置、场地恢复</td></tr></table>
+        </div>
+      </div>
+      <div class="notice">
+        <b>建议决策门槛：</b>中试成品率不低于70%、综合加工成本不高于1300元/吨原料、成品或调和产品有明确销路时，优先实施热提纯；成品率60%至70%时，只处理A类和部分B类高含油原料；成品率低于60%、过滤严重堵塞或残渣处置成本过高时，剩余低品位物料转破碎粉料利用。
+      </div>
+      <h2>经济敏感性测算</h2>
+      <p>以下按2000吨原料、暂不计原库存账面成本、税费、资金占用和外部运输费用测算。由于沥青现货价格波动，实际谈判应采用“基准价+升贴水+质量扣减”的合同方式。</p>
+      <table>
+        <tr><th>情景</th><th>有效成品率</th><th>成品销售价</th><th>加工成本</th><th>估算收入</th><th>扣加工费后余额</th><th>判断</th></tr>
+        <tr><td>谨慎</td><td>55%</td><td>3800元/吨</td><td>1500元/吨原料</td><td>418万元</td><td>118万元</td><td>若粉料路线净回收更高，应停止全面提纯。</td></tr>
+        <tr><td>中性</td><td>70%</td><td>4300元/吨</td><td>1200元/吨原料</td><td>602万元</td><td>362万元</td><td>具备实施价值，但需锁定销路和质量指标。</td></tr>
+        <tr><td>积极</td><td>80%</td><td>4700元/吨</td><td>1000元/吨原料</td><td>752万元</td><td>552万元</td><td>优先热提纯，并尽快分批销售。</td></tr>
+      </table>
+      <h2>中试验收清单</h2>
+      <div class="card">
+        <ul class="checklist">
+          <li>每个原料分区完成含水率、灰分/不溶物、有效沥青回收率检测。</li>
+          <li>10-30吨中试做完整物料衡算：投入、成品、湿残渣、干残渣、水分、设备残留。</li>
+          <li>记录每吨原料燃料或电耗、导热油温度曲线、脱水时间和起泡情况。</li>
+          <li>记录粗滤、沉降、精滤各段压差、堵塞频率、清理时间和滤渣含油率。</li>
+          <li>成品检测针入度、软化点、延度、黏度、闪点、密度、加热损失和老化后性能。</li>
+          <li>完成与70#或90#基质沥青10%、20%、30%、40%比例调和试验。</li>
+          <li>废气收集、冷凝液、隔油池、含油残渣和废滤材形成合规处置路径。</li>
+          <li>确认消防、防烫、急停、联锁、作业票和人员防护用品到位。</li>
+        </ul>
+      </div>
+      <h2>不得省略的安全环保底线</h2>
+      <table>
+        <tr><th>类别</th><th>最低要求</th><th>原因</th></tr>
+        <tr><td>脱水</td><td>湿料必须经预热脱水，确认无明显蒸汽和夹水后再入釜。</td><td>防止水急剧汽化导致喷料、冲料和灼伤。</td></tr>
+        <tr><td>加热</td><td>采用导热油间接加热，导热油炉、燃烧器和热油系统由资质单位设计安装。</td><td>降低明火直烧、局部结焦、导热油泄漏和火灾风险。</td></tr>
+        <tr><td>废气</td><td>熔化釜、沉降罐、储罐、过滤器和装车口废气统一收集处理。</td><td>控制沥青烟、油雾和VOCs，便于监测和验收。</td></tr>
+        <tr><td>排渣</td><td>热渣先回滴回收附着沥青，冷却后分类检测和处置。</td><td>提高提纯率，避免含油残渣随意外运造成环保风险。</td></tr>
+        <tr><td>电气消防</td><td>热加工区设置急停、可燃气体监测、灭火器材、消防通道和高温防烫隔离。</td><td>热沥青和导热油系统的事故发展快，必须提前隔离和联锁。</td></tr>
+      </table>
+    </section>
+
+    <section id="refs">
+      <h2>参考依据和市场校核</h2>
+      <div class="card">
+        <p>标准依据：GB/T 15180-2025《重交通道路石油沥青》已于2025-02-28发布，2025-09-01实施；交通运输部公告发布的JTG F40-2004《公路沥青路面施工技术规范》自2005-01-01施行，仍是道路沥青施工和材料应用的重要依据之一；沥青烟有组织排放可参考HJ/T 45-1999《固定污染源排气中沥青烟的测定 重量法》进行监测。</p>
+        <p>市场校核：公开资讯显示，2026年4月华南沥青市场价格曾在约4530-4558元/吨附近，山东、华东、华北等区域存在明显价差；2026年6月公开报价中70#沥青也出现4200-4500元/吨左右的卖盘。由于价格持续波动，本方案只采用区间测算，不把某一天的报价作为最终销售依据。</p>
+        <p>网页参考来源：国家标准信息公共服务平台、交通运输部政府信息公开、生态环境部标准页面、隆众资讯公开市场文章、生意社公开报价页面。正式投资决策前，应补充当地现货报价、客户合同指标、第三方检测报告和设备厂家正式报价。</p>
+      </div>
+    </section>
+
+    <section class="footer">
+      <p>本网页为“约2000吨陈旧湖沥青提纯处置实施方案”专业工程讨论版。设备尺寸、材料厚度、焊接、保温、防爆、电气、消防、环保和特种设备边界，必须以现场勘察、中试数据和资质单位正式设计为准。</p>
+    </section>
+  </main>
+</body>
+</html>
